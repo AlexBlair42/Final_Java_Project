@@ -1,0 +1,10 @@
+
+public class Character {
+	
+	
+	String name;
+	int age;
+	char gender;
+	
+
+}
