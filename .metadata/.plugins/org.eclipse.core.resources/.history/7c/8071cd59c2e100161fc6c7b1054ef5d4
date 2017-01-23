@@ -1,7 +1,7 @@
 import java.util.Random;
 
 public final class Character {
-	// This class should be done!!!
+	
 	private final String name;
 	private final String description;
 	private final int maxHP;
