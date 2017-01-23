@@ -1,0 +1,25 @@
+Hello and welcome to the Dungeon!
+
+Please provide some character information.
+Name:
+Age:
+Gender:
+
+
+
+The Adventure is about to begin!
+
+You set out into the darkness having just eaten a meal and drank water. Your supplies are minimal but you are ready.
+
+You come across a dead body with a sword stuck in its spine. What do you do?
+1.Take sword.
+2.Move further into the darkness.
+
+
+You realize that you must produce light so that you may see.
+1.Fashion a torch from nearby wood and cloth.
+2.Use oil from the meat you cooked earlier to create short amounts of light. 
+
+You have discovered a deep chasm that you must traverse. 
+1. Attempt to jump across and risk falling into the ever decending darkness.
+2. Slowly tip toe around the edge in hopes of finding a narrow spot or a bridge.
