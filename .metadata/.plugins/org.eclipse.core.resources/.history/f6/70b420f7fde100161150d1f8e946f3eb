@@ -25,15 +25,15 @@ public final class Enemy {
 		enemySeen.add(i);
 		
 		if(i == 0){
-			return new Enemy("Dragon ", " A large fire breathing lizard. ", 600, 30, 80);
+			return new Enemy("Dragon ", " A large fire breathing lizard. ", 40, 6, 15);
 		}else if (i == 1){
-			return new Enemy("Ghoul ", " An undead wanderer. ", 300, 10, 25);
+			return new Enemy("Ghoul ", " An undead wanderer. ", 30, 2, 10);
 		}else {
-			return new Enemy("Horror ", " Unknown appearance. ", 450, 20, 50);
+			return new Enemy("Horror ", " Unknown appearance. ", 60, 1, 5);
 		}
 	}
 	public static Enemy newBossInstance(){
-		return new Enemy("Large Bat ", " A very large cave bat. ", 250, 25, 40);
+		return new Enemy("Large Bat ", " A very large cave bat. ", 25, 3, 20);
 	}
 	private Enemy(String name, String description, int hitP, int mindmg, int maxdmg){
 		this.name = name;
@@ -49,7 +49,7 @@ public final class Enemy {
 		return description;
 	}
 	public String getStatus(){
-		return "Enemy HP: " + hitP;
+		return " Enemy HP: " + hitP;
 	}
 	public int attack(){
 		return rand.nextInt(maxdmg - mindmg + 1 ) + mindmg;
@@ -60,7 +60,7 @@ public final class Enemy {
 		hitP = (hitP > attackStr) ? hitP - attackStr : 0;
 		System.out.printf("%s hits %s for %d HP of damage (%s)\n" , character, name, attackStr, getStatus());
 		if (hitP == 0){
-			System.out.println( character + " defeats " + name + "!\n ");
+			System.out.println("  " + character + " defeats " + name + "!\n ");
 		}
 	}
 	

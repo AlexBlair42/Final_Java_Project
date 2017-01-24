@@ -63,7 +63,7 @@ public final class Chamber {
 	}
 	
 	public void enter(Character character) throws IOException{
-		System.out.println("You are (in/on) " + description);
+		System.out.println("You are in " + description);
 		if(enemy.Alive()){
 			new Combat(character, enemy);
 		}

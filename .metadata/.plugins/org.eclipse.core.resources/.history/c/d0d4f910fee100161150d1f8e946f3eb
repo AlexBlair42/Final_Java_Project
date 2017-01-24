@@ -75,9 +75,9 @@ public final class Dungeon {
             moveCharacter(character);
         }
         if (character.Alive()) {
-            System.out.println("A crown");
+            System.out.println(" A crown ");
         } else {
-            System.out.println("A Reaper");
+            System.out.println(" A Reaper ");
         }
     }
     public static Dungeon newInstance() {
