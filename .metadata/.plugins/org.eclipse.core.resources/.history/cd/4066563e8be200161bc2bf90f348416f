@@ -3,13 +3,15 @@ import java.io.IOException;
 import java.io.InputStreamReader;
 import java.util.HashMap;
 import java.util.Map;
-
+// This class should be done!!!
 public final class Dungeon {
 	
 	private final Map<Integer, Map<Integer,Chamber>> map = new HashMap<Integer, Map<Integer,Chamber>>();
 	private Chamber currChamb;
 	private int currX = 0;
 	private int currY = 0;
+	private int newX;
+	private int newY;
 	
 	
 	private Dungeon(){}
@@ -37,23 +39,23 @@ public final class Dungeon {
 	}
 	
 	public void moveCharacter(Character character) throws IOException{
-		boolean northPoss = chambExists(currX, currY + 1);
-        boolean southPoss = chambExists(currX, currY - 1);
-        boolean eastPoss = chambExists(currX + 1, currY);
-        boolean westPoss = chambExists(currX - 1, currY);
+		boolean northPossible = chambExists(currX, currY + 1);
+        boolean southPossible = chambExists(currX, currY - 1);
+        boolean eastPossible = chambExists(currX + 1, currY);
+        boolean westPossible = chambExists(currX - 1, currY);
         System.out.print("Where would you like to go? \n");
-        if(northPoss || southPoss || eastPoss || westPoss){
+        if(northPossible || southPossible || eastPossible || westPossible){
         System.out.println("Please select either North(n), South(s), East(e), or West(w), or press (h) to heal.");
         }
         BufferedReader in = new BufferedReader(new InputStreamReader(System.in));
         String direction = in.readLine();
-        if (direction.equals("n") && northPoss) {
+        if (direction.equals("n") && northPossible) {
             currY++;
-        } else if (direction.equals("s") && southPoss) {
+        } else if (direction.equals("s") && southPossible) {
         	currY--;
-        } else if (direction.equals("e") && eastPoss) {
+        } else if (direction.equals("e") && eastPossible) {
            currX++;
-        } else if (direction.equals("w") && westPoss) {
+        } else if (direction.equals("w") && westPossible) {
             currX--;
         }
         if(direction.equals("n")|| direction.equals("w")|| direction.equals("s")|| direction.equals("e")){
