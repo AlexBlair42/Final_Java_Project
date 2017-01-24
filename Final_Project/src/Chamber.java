@@ -27,6 +27,7 @@ public final class Chamber {
 			i = rand.nextInt(Num_Room);
 		}while (roomdone.contains(i));
 		roomdone.add(i);
+	
 		
 		String roomDesc = null;
 		if (i == 0){
@@ -58,6 +59,7 @@ public final class Chamber {
 	public boolean isComplete(){
 		return !enemy.Alive();
 	}
+	@Override
 	public String toString(){
 		return description;
 	}

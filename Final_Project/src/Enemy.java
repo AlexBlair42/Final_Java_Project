@@ -1,7 +1,6 @@
 import java.util.HashSet;
 import java.util.Random;
 import java.util.Set;
-import java.util.*;
 // This class should be finished!!!!!
 public final class Enemy {
 
@@ -12,7 +11,7 @@ public final class Enemy {
 	private final int maxdmg;
 	private final static Random rand = new Random();
 	private final static Set<Integer> enemySeen = new HashSet<Integer>();
-	private final static int NUM_ENEMY = 3;
+	private final static int NUM_ENEMY = 4;
 	
 	public static Enemy newRandomInstance(){
 		if(enemySeen.size() == NUM_ENEMY){
@@ -25,15 +24,17 @@ public final class Enemy {
 		enemySeen.add(i);
 		
 		if(i == 0){
-			return new Enemy("Dragon ", " A large fire breathing lizard. ", 600, 30, 80);
+			return new Enemy("Dragon ", " A large fire breathing lizard. ", 600, 30, 65);
 		}else if (i == 1){
-			return new Enemy("Ghoul ", " An undead wanderer. ", 300, 10, 25);
+			return new Enemy("Ghoul ", " An undead wanderer. ", 300, 20, 30);
+		}else if(i==2){
+			return new Enemy ("Spectre", " Shade like appearance", 250,25,50);
 		}else {
-			return new Enemy("Horror ", " Unknown appearance. ", 450, 20, 50);
+			return new Enemy("Horror ", " A large beast with tentacles and four arms. ", 500, 35, 75);
 		}
 	}
 	public static Enemy newBossInstance(){
-		return new Enemy("Large Bat ", " A very large cave bat. ", 250, 25, 40);
+		return new Enemy("Minetour ", " A half breed between a Bull and a Human!. ", 800, 50, 150);
 	}
 	private Enemy(String name, String description, int hitP, int mindmg, int maxdmg){
 		this.name = name;
@@ -60,7 +61,7 @@ public final class Enemy {
 		hitP = (hitP > attackStr) ? hitP - attackStr : 0;
 		System.out.printf("%s hits %s for %d HP of damage (%s)\n" , character, name, attackStr, getStatus());
 		if (hitP == 0){
-			System.out.println( character + " defeats " + name + "!\n ");
+			System.out.println( character + " defeats the " + name + "!\n ");
 		}
 	}
 	

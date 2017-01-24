@@ -10,6 +10,8 @@ public final class Dungeon {
 	private Chamber currChamb;
 	private int currX = 0;
 	private int currY = 0;
+	private int newX;
+	private int newY;
 	
 	
 	private Dungeon(){}
@@ -41,43 +43,41 @@ public final class Dungeon {
         boolean southPossible = chambExists(currX, currY - 1);
         boolean eastPossible = chambExists(currX + 1, currY);
         boolean westPossible = chambExists(currX - 1, currY);
-        System.out.print("Where would you like to go: ");
-        if (northPossible) {
-            System.out.print(" North (n) ");
+        System.out.print("Where would you like to go? \n");
+        if(northPossible || southPossible || eastPossible || westPossible){
+        System.out.println("Please select either North(n), South(s), East(e), or West(w), or press (h) to heal.");
         }
-        if (eastPossible) {
-            System.out.print(" East (e) ");
-        }
-        if (southPossible) {
-            System.out.print(" South (s) ");
-        }
-        if (westPossible) {
-            System.out.print(" West (w) ");
-        }
-        System.out.print(" ?");
         BufferedReader in = new BufferedReader(new InputStreamReader(System.in));
         String direction = in.readLine();
-        if (direction.equals(" n") && northPossible) {
+        if (direction.equals("n") && northPossible) {
             currY++;
-        } else if (direction.equals(" s") && southPossible) {
-            currY--;
-        } else if (direction.equals(" e") && eastPossible) {
-            currX++;
-        } else if (direction.equals(" w") && westPossible) {
+        } else if (direction.equals("s") && southPossible) {
+        	currY--;
+        } else if (direction.equals("e") && eastPossible) {
+           currX++;
+        } else if (direction.equals("w") && westPossible) {
             currX--;
         }
+        if(direction.equals("n")|| direction.equals("w")|| direction.equals("s")|| direction.equals("e")){
         currChamb = getChamber(currX, currY);
         currChamb.enter(character);
+        }else 
+        	System.out.println("That character is not a valid input. Please select another direction.");
     }
 
-    public void startQuest(Character character) throws IOException {
+    public void startQuest(Character character) {
         while (character.Alive() && !isDone()) {
-            moveCharacter(character);
+            try {
+				moveCharacter(character);
+			} catch (IOException e) {
+				
+				e.printStackTrace();
+			}
         }
         if (character.Alive()) {
-            System.out.println("A crown");
+            System.out.println("A HERO!");
         } else {
-            System.out.println("A Reaper");
+            System.out.println("RIP");
         }
     }
     public static Dungeon newInstance() {
