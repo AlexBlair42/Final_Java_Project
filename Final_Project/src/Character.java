@@ -28,10 +28,10 @@ public final class Character {
 	public void defend(Enemy enemy){
 		int attackStr = enemy.attack();
 		hitP = (hitP > attackStr) ? hitP - attackStr : 0;
-		System.out.printf(" " + name + " is hit for %d HP of damage type (%s)\n" , attackStr, getStatus());
+		System.out.printf(" " + name + " is hit for %d HP of damage. (%s)\n" , attackStr, getStatus());
 		if(hitP == 0)
 		{
-			System.out.println(" " + name + "is Dead!\n");
+			System.out.println(" " + name + " is Dead!\n");
 		}
 	}
 	

@@ -5,8 +5,8 @@ import java.io.InputStreamReader;
 public final class Combat {
 	
 	public Combat(Character character, Enemy enemy) throws IOException{
-		System.out.println("A wild " + enemy + "appears! :" + enemy.getDescription() + "\n");
-		System.out.println("Let the battle with " + enemy + " begin! (" + character.getStatus() + " / " + enemy.getStatus() + ")" );
+		System.out.println("A wild " + enemy + " appears! :" + enemy.getDescription() + "\n");
+		System.out.println("Let the battle with the " + enemy + " begin! (" + character.getStatus() + " / " + enemy.getStatus() + ")" );
 		BufferedReader in = new BufferedReader(new InputStreamReader(System.in));
 		
 		while (character.Alive() && enemy.Alive()){

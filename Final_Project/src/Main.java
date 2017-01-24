@@ -8,10 +8,10 @@ public final class Main {
 	
 	public void play() throws IOException{
 		System.out.println("You are " + character + " " + character.getDescription());
-		Dungeon.newInstance().startAdventure(character);
+		Dungeon.newInstance().startQuest(character);
 	}
 
-	public static void main(String[] args) {
+	public static void main(String[] args) throws IOException {
 		Main main = new Main();
 		main.play();
 
