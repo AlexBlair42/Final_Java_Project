@@ -1,0 +1,56 @@
+Character text:
+
+
+is hit for %d HP of damage. (%s)\n"
+" is Dead!\n"
+"%s drinks a life saving red portion! (%s, %d potions left)\n"
+ Uh-oh! You have run out of potions.\n
+ Character HP: 
+ Sam", "a 25 year old adventurer!
+ 
+ Main text:
+ "You are "
+ 
+ Combat txt:
+ "A wild " " appears! :"
+ "Let the battle with the " " begin!"
+ "Attack (a) or heal (h)? "
+ "(h)"
+ 
+ Enemy txt:
+ 
+ "Dragon ", " A large fire breathing lizard. "
+ "Ghoul ", " An undead wanderer. "
+ "Spectre", " Shade like appearance"
+ "Horror ", " A large beast with tentacles and four arms. "
+ 
+ "Minetour ", " A half breed between a Bull and a Human!. "
+ 
+ "%s hits %s for %d HP of damage (%s)\n" 
+ 
+  " defeats the "
+  
+  Dungeon txt:
+  "You set out on your epic quest!
+  "Where would you like to go :"
+  "North (n)"
+  "East (e)"
+  "South (s)"
+  "West (w)"
+  " ? "
+  
+  "That character is not a valid input. Please select another direction."
+  
+  "A HERO!"
+  "RIP"
+  
+  Chamber txt:
+  "A dragon's lair that is dark and full of horrors."
+   "An undead bog infested with Ghouls and all sorts of evil beings. "
+   "A dark cave filled with horrors. "
+   "A prison with rotting corpses and celestial beeings. "
+   "A spider infested forest that is dark and full of webs. "
+   "The edge of a cliff with the sea bashing against the rock "
+   "A shadowy room where water drops can be heard in the distance. "
+   "A very large and open room with a very large door. "
+   "You are (in/on) "

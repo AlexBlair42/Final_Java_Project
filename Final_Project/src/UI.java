@@ -1,4 +1,9 @@
-/*import javax.swing.*;
+/**
+ * This class is meant to be the GUI for my dungeon, but I was unable to fully implement it.
+ */
+
+/****
+import javax.swing.*;
 import java.awt.*;
 
 public class UI extends JComponent {
@@ -8,36 +13,31 @@ public class UI extends JComponent {
 	Image imagebo;//
 	Image imagecl;//
 	Image imaged;//
-	Image imagedc;//
-	Image imagew;//
-	Image imageg;//
-	Image imageh;//
-	Image imagem;//
-	Image images;//
+	//Image imagedc;//
+	Image imagew;
+	//Image imageg;//
+	//Image imageh;//
+	//Image imagem;//
+	//Image images;//
 	
-	public UI(Image c, Image b, Image o, Image cl, Image d, Image dc, Image w, Image g, Image h, Image m, Image s)
+	public UI(Image c, Image b, Image o, Image cl, Image d, Image w)
 	{
-		imagec = c;
-		imageb = b;
-		imagebo = o;
-		imagecl = cl;
-		imaged = d;
-		imagedc = dc;
-		imagew = w;
-		imageg = g;
-		imageh = h;
-		imagem = m;
-		images = s;
+		c = imagec;
+		b = imageb;
+		o = imagebo;
+		cl = imagecl;
+		d = imaged;
+		w = imagew;
 	}
 	
 	public void paint(Graphics g){
 		Graphics2D g2 = (Graphics2D)g;
-		g2.drawImage(imagec, 0,0,this);
-		g2.drawImage(imageb, 0, 0, this);
-		g2.drawImage(imagecl, 0, 0, this);
-		g2.drawImage(imagew, 0, 0, this);
-		g2.drawImage(imaged, 0, 0, this);
-		g2.drawImage(imagebo,0, 0, this);
+		g2.drawImage(imagec, 0,100,this);
+		g2.drawImage(imageb, 100, 200, this);
+		g2.drawImage(imagecl, 300, 400, this);
+		g2.drawImage(imagew, 500, 600, this);
+		g2.drawImage(imaged, 700, 800, this);
+		g2.drawImage(imagebo, 900, 1000, this);
 		
 	}
 	
@@ -55,19 +55,22 @@ public class UI extends JComponent {
 		String minotaur = "/Resources/Minotaur.jpg";
 		
 		Image imagec = Toolkit.getDefaultToolkit().getImage(UI.class.getResource(cave));
-		imagec = imagec.getScaledInstance(1500, 1080, Image.SCALE_SMOOTH);
+		imagec = imagec.getScaledInstance(300, 300, Image.SCALE_SMOOTH);
 		
 		Image imageb = Toolkit.getDefaultToolkit().getImage(UI.class.getResource(bog));
-		imageb = imageb.getScaledInstance(1500, 1080, Image.SCALE_SMOOTH);
+		imageb = imageb.getScaledInstance(300, 300, Image.SCALE_SMOOTH);
 		
 		Image imagecl = Toolkit.getDefaultToolkit().getImage(UI.class.getResource(cliff));
-		imagecl = imagecl.getScaledInstance(1500, 1080, Image.SCALE_SMOOTH);
+		imagecl = imagecl.getScaledInstance(300, 300, Image.SCALE_SMOOTH);
 		
 		Image imagew = Toolkit.getDefaultToolkit().getImage(UI.class.getResource(woods));
-		imagew = imagew.getScaledInstance(1500, 1080, Image.SCALE_SMOOTH);
+		imagew = imagew.getScaledInstance(300, 300, Image.SCALE_SMOOTH);
 		
 		Image imaged = Toolkit.getDefaultToolkit().getImage(UI.class.getResource(lair));
-		imaged = imaged.getScaledInstance(1500, 1080, Image.SCALE_SMOOTH);
+		imaged = imaged.getScaledInstance(300, 300, Image.SCALE_SMOOTH);
+		
+		Image imagebo = Toolkit.getDefaultToolkit().getImage(UI.class.getResource(boss));
+		imagebo = imagebo.getScaledInstance(300, 300, Image.SCALE_SMOOTH);
 		
 		Image imagedc = Toolkit.getDefaultToolkit().getImage(UI.class.getResource(dragon));
 		imagedc = imagedc.getScaledInstance(1500, 1080, Image.SCALE_SMOOTH);
@@ -87,19 +90,13 @@ public class UI extends JComponent {
 		Image images = Toolkit.getDefaultToolkit().getImage(UI.class.getResource(spectre));
 		images = images.getScaledInstance(1500, 1080, Image.SCALE_SMOOTH);
 		
-		JFrame frame = new JFrame("Cave");
-		frame.add(new UI(imagec, imageb, imagecl, imagew, imaged, imagedc, imagebo, imageg, imageh, imagem, images));
+		JFrame frame = new JFrame("Dungeon");
+		frame.add(new UI(imagec, imageb, imagecl, imagew, imaged, imagebo));
 		frame.setSize(1500, 1080);
 		frame.setDefaultCloseOperation(JFrame.EXIT_ON_CLOSE);
 		frame.setVisible(true);
 		
-		JFrame frame2 = new JFrame("Bog");
-		frame2.add(new UI(imageb));
-		frame2.setSize(1500, 1080);
-		frame2.setVisible(true);
-		frame2.setDefaultCloseOperation(JFrame.EXIT_ON_CLOSE);;
-		
 	}
 
 }
-*/
+***/

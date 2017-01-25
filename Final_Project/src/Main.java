@@ -20,9 +20,13 @@ public final class Main {
 	
 	private final Character character = Character.newInstance();
 	
+	/**
+	 * This function sets the character and creates a Dungeon in which the quest is started.
+	 * @throws IOException
+	 */
 	public void play() throws IOException{
 		System.out.println("You are " + character + " " + character.getDescription());
-		Dungeon.newInstance().startQuest(character);
+		Dungeon.newInstance().Adventure(character);
 	}
 
 	public static void main(String[] args) {

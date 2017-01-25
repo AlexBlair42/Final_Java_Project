@@ -1,0 +1,27 @@
+import java.io.BufferedReader;
+import java.io.IOException;
+import java.io.InputStreamReader;
+
+public final class Combat {
+	
+	public Combat(Character character, Enemy enemy) throws IOException{
+		System.out.println("A wild " + enemy + " appears! :" + enemy.getDescription() + "\n");
+		System.out.println("Let the battle with the " + enemy + " begin! (" + character.getStatus() + " / " + enemy.getStatus() + ")" );
+		BufferedReader in = new BufferedReader(new InputStreamReader(System.in));
+		
+		while (character.Alive() && enemy.Alive()){
+			 System.out.print("Attack (a) or heal (h)? ");
+	           String action = in.readLine();
+	            if (action.equals("h")) {
+	                character.heal();
+	            } else {
+	                enemy.defend(character);
+	            }
+	            if (enemy.Alive()) {
+	                character.defend(enemy);
+	            }
+	            
+		}
+	}
+
+}
