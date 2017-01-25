@@ -1,0 +1,50 @@
+import javax.swing.*;
+import java.awt.*;
+
+public class UI extends JComponent {
+	
+	Image imagec;
+	Image imageb;
+	
+	public UI(Image c)
+	{
+		imagec = c;
+		
+	}
+	
+	public UI1(Image b){
+		image b = b;
+	}
+	
+	public void paint(Graphics g){
+		Graphics2D g2 = (Graphics2D)g;
+		g2.drawImage(imagec, 0,0,this);
+		g2.drawImage(imageb, 0, 0, this);
+		repaint();
+	}
+	
+	public static void main (String[] args){
+		String cave = "/Resources/cave.jpg";
+		String bog = "/Resources/bog.jpg";
+		
+		Image imagec = Toolkit.getDefaultToolkit().getImage(UI.class.getResource(cave));
+		imagec = imagec.getScaledInstance(1500, 1080, Image.SCALE_SMOOTH);
+		
+		Image imageb = Toolkit.getDefaultToolkit().getImage(UI.class.getResource(bog));
+		imageb = imageb.getScaledInstance(1500, 1080, Image.SCALE_SMOOTH);
+		
+		JFrame frame = new JFrame("Cave");
+		frame.add(new UI(imagec));
+		frame.setSize(1500, 1080);
+		frame.setDefaultCloseOperation(JFrame.EXIT_ON_CLOSE);
+		frame.setVisible(true);
+		
+		JFrame frame2 = new JFrame("Bog");
+		frame2.add(new UI(imageb));
+		frame2.setSize(1500, 1080);
+		frame2.setVisible(true);
+		frame2.setDefaultCloseOperation(JFrame.EXIT_ON_CLOSE);;
+		
+	}
+
+}

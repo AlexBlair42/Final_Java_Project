@@ -2,6 +2,104 @@
 import java.awt.*;
 
 public class UI extends JComponent {
+	
+	Image imagec;//
+	Image imageb;//
+	Image imagebo;//
+	Image imagecl;//
+	Image imaged;//
+	Image imagedc;//
+	Image imagew;//
+	Image imageg;//
+	Image imageh;//
+	Image imagem;//
+	Image images;//
+	
+	public UI(Image c, Image b, Image o, Image cl, Image d, Image dc, Image w, Image g, Image h, Image m, Image s)
+	{
+		imagec = c;
+		imageb = b;
+		imagebo = o;
+		imagecl = cl;
+		imaged = d;
+		imagedc = dc;
+		imagew = w;
+		imageg = g;
+		imageh = h;
+		imagem = m;
+		images = s;
+	}
+	
+	public void paint(Graphics g){
+		Graphics2D g2 = (Graphics2D)g;
+		g2.drawImage(imagec, 0,0,this);
+		g2.drawImage(imageb, 0, 0, this);
+		g2.drawImage(imagecl, 0, 0, this);
+		g2.drawImage(imagew, 0, 0, this);
+		g2.drawImage(imaged, 0, 0, this);
+		g2.drawImage(imagebo,0, 0, this);
+		
+	}
+	
+	public static void main (String[] args){
+		String cave = "/Resources/cave.jpg";
+		String bog = "/Resources/bog.jpg";
+		String boss = "/Resources/boss.jpg";
+		String cliff = "/Resources/cliff.jpg";
+		String lair = "/Resources/dragon.jpg";
+		String dragon = "/Resources/dragoncreature.jpg";
+		String woods = "/Resources/duskwood.jpg";
+		String ghoul = "/Resources/ghoul.jpg";
+		String horror = "/Resources/horror.jpg";
+		String spectre = "/Resources/spectre.jpg";
+		String minotaur = "/Resources/Minotaur.jpg";
+		
+		Image imagec = Toolkit.getDefaultToolkit().getImage(UI.class.getResource(cave));
+		imagec = imagec.getScaledInstance(1500, 1080, Image.SCALE_SMOOTH);
+		
+		Image imageb = Toolkit.getDefaultToolkit().getImage(UI.class.getResource(bog));
+		imageb = imageb.getScaledInstance(1500, 1080, Image.SCALE_SMOOTH);
+		
+		Image imagecl = Toolkit.getDefaultToolkit().getImage(UI.class.getResource(cliff));
+		imagecl = imagecl.getScaledInstance(1500, 1080, Image.SCALE_SMOOTH);
+		
+		Image imagew = Toolkit.getDefaultToolkit().getImage(UI.class.getResource(woods));
+		imagew = imagew.getScaledInstance(1500, 1080, Image.SCALE_SMOOTH);
+		
+		Image imaged = Toolkit.getDefaultToolkit().getImage(UI.class.getResource(lair));
+		imaged = imaged.getScaledInstance(1500, 1080, Image.SCALE_SMOOTH);
+		
+		Image imagedc = Toolkit.getDefaultToolkit().getImage(UI.class.getResource(dragon));
+		imagedc = imagedc.getScaledInstance(1500, 1080, Image.SCALE_SMOOTH);
+		
+		Image imagebo = Toolkit.getDefaultToolkit().getImage(UI.class.getResource(boss));
+		imagebo = imagebo.getScaledInstance(1500, 1080, Image.SCALE_SMOOTH);
+		
+		Image imageg = Toolkit.getDefaultToolkit().getImage(UI.class.getResource(ghoul));
+		imageg = imageg.getScaledInstance(1500, 1080, Image.SCALE_SMOOTH);
+		
+		Image imageh = Toolkit.getDefaultToolkit().getImage(UI.class.getResource(horror));
+		imageh = imageh.getScaledInstance(1500, 1080, Image.SCALE_SMOOTH);
+		
+		Image imagem = Toolkit.getDefaultToolkit().getImage(UI.class.getResource(minotaur));
+		imagem = imagem.getScaledInstance(1500, 1080, Image.SCALE_SMOOTH);
+		
+		Image images = Toolkit.getDefaultToolkit().getImage(UI.class.getResource(spectre));
+		images = images.getScaledInstance(1500, 1080, Image.SCALE_SMOOTH);
+		
+		JFrame frame = new JFrame("Cave");
+		frame.add(new UI(imagec, imageb, imagecl, imagew, imaged, imagedc, imagebo, imageg, imageh, imagem, images));
+		frame.setSize(1500, 1080);
+		frame.setDefaultCloseOperation(JFrame.EXIT_ON_CLOSE);
+		frame.setVisible(true);
+		
+		JFrame frame2 = new JFrame("Bog");
+		frame2.add(new UI(imageb));
+		frame2.setSize(1500, 1080);
+		frame2.setVisible(true);
+		frame2.setDefaultCloseOperation(JFrame.EXIT_ON_CLOSE);;
+		
+	}
 
 }
 */

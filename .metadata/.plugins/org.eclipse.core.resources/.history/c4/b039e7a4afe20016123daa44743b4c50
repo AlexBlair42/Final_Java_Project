@@ -1,0 +1,44 @@
+import javax.swing.*;
+import java.awt.*;
+
+public class UI extends JComponent {
+	
+	Image imagec;
+	Image imageb;
+	Image imagebo;
+	Image imagecl;
+	Image imaged;
+	Image imagedc;
+	Image imagew;
+	Image imageg;
+	Image imageh;
+	Image imagem;
+	Image images;
+	
+	public UI(Image c/*, Image b, Image o, Image cl, Image d, Image dc, Image w, Image g, Image h, Image m, Image s*/)
+	{
+		imagec = c;
+		/*imageb = b;
+		imagebo = o;
+		imagecl = cl;
+		imaged = d;
+		imagedc = dc;
+		imagew = w;
+		imageg = g;
+		imageh = h;
+		imagem = m;
+		images = s;
+		*/
+	}
+	
+	public void paint(Graphics g){
+		Graphics2D g2 = (Graphics2D)g;
+		g2.drawImage(imagec, 0,0,this);
+		g2.drawImage(imageb, 0, 0, this);
+		g2.drawImage(imagecl, 0, 0, this);
+		g2.drawImage(imagew, 0, 0, this);
+		g2.drawImage(imaged, 0, 0, this);
+		
+	}
+
+}

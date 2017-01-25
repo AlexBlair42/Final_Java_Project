@@ -1,0 +1,18 @@
+import javax.swing.*;
+import java.awt.*;
+
+public class UI extends JComponent {
+	
+	Image imagec;
+	
+	public UI(Image c)
+	{
+		imagec = c;
+	}
+	
+	public void paint(Graphics g){
+		Graphics2D g2 = (Graphics2D)g;
+		g2.drawImage(imagec, 0,0,this);
+		repaint();
+	}
+}
